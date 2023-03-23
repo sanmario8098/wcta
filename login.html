@@ -1,0 +1,116 @@
+<html><head>
+
+
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link id="the_css" rel="stylesheet" type="text/css" href="https://surgemail.wcta.net/surgeweb/1992604237/login.css?newlook=&amp;">
+
+<style type="text/css">
+	 #loading_ajax,#loading_html{position:absolute;left:0;top:0;width:100%;height:100%;z-index:1000;background-color:#fff; text-shadow: #fff 0px 0 15px, #fff 0px 0 12px, #fff 0px 0 12px, #fff 2px 0 10px;}
+	 .msg1{position:absolute;left:20px;top:30px;font-size:14px;font-weight:bold;color:#000; }
+	 .msg2{position:absolute;right:20px;bottom:30px;font-size:12px;font-weight:normal;color:#000;}
+	.hidden{display:none;}
+</style>
+  <title>SurgeWeb - wcta.net</title>
+</head>
+
+<body onload="do_init();" class="body_bg2" style="overflow:hidden;">
+
+<div id="loading_ajax" class="hidden">
+  <div class="msg1">Loading SurgeWeb email, logging in ...</div>
+  <div class="msg2">Loading standard (Web 2.0) interface | Load basic HTML interface (for slow computers)</div>
+</div>
+<div id="loading_html" class="hidden">
+  <div class="msg1">Loading SurgeWeb email,</div>
+  <div class="msg2">Loading basic interface</div>
+</div>
+
+
+
+
+<form action="/surgeweb" method="POST" name="main">
+
+
+<div id="appearance_bg" class="appearance_bg"><div id="login_outer" class="login_outer"><div id="login_inner" class="login_inner">
+
+<div id="login_panel_pre">
+ <div id="login_title"> <span>Welcome to SurgeWeb</span></div>
+ <div id="login_title_comment"> <span>Surgeweb login page for all interfaces.</span></div>
+</div>
+<div id="login_panel">
+
+<div id="login_panel_header"></div>
+
+
+
+
+ <table style="text-align:left;">
+ <tbody><tr><td>Username</td><td style="text-align:left;"><input type="text" name="username_ex" value="" tabindex="1" style="width:160px;">
+ 	 	</td></tr>
+ <tr><td>Password</td><td><input type="password" name="password" tabindex="2" style="width:160px;"></td></tr>
+
+ <tr id="interface_line"><td>Interface</td><td>
+ <select id="interface_ex" name="interface_ex" onchange="select_interface(this)">
+		<option value="ajax">Standard</option>
+  
+ 
+	
+	<option value="html">Basic</option>
+		<option value="mobile">Mobile</option>
+  </select>
+ <select id="language" name="language" onchange="select_lang(this);">
+							<option value="English">English (UK)
+					</option><option value="English US" selected="">English (US)
+		
+				</option></select>
+		<input type="hidden" name="lang_last" value="English US">
+		<input type="hidden" name="lang_showall" value="true">
+ </td></tr>
+ 
+ <tr id="remember_me"><td colspan="2">Remember me<input name="remember" id="remember" type="checkbox"></td></tr>
+
+ <tr><td></td><td><input type="submit" name="cmd_login" id="cmd_login" value="Log in" onclick="check_mode(event);action_login(event);" tabindex="3" oncontextmenu="return false;"></td></tr>
+
+
+ <tr id="bad_browser" style="text-align:left;display:none;"><td colspan="2">
+ 	<div style="padding-top:5px; padding-bottom:5px;">Browser: <span class="boldred">FAILED TEST</span></div>
+ 	<div style="font-size:0.9em;">Note: <span class="red">A modern browser is needed to use the standard (Ajax/Web 2.0) interface.</span><br>&nbsp;&nbsp;- Tested to work: IE7+, Safari 3.1+, Firefox 3.0+, Google Chrome 1+<br>&nbsp;&nbsp;- Mostly works in : Opera 9.51, Firefox 2.0, Camino 1.69<br>&nbsp;&nbsp;- Will NOT work in : various other older browsers including IE6<br></div>
+ 	<div style="padding-top:5px; padding-bottom:5px;">Note: Other modern browsers such as recent Opera etc will probably work but need further compatibility testing &amp; development</div>
+ 	</td></tr>
+ </tbody></table>
+</div>
+<div id="login_panel_post">
+    <span>
+	<div id="login_post_comment">SurgeWeb ©2009-2021 <a href="" target="popup" style="color:white">Netwin Ltd</a>, <a class="login_link_small" href="">about SurgeMail</a></div>
+    </span>
+</div>
+</div></div></div>
+
+</form>
+
+
+
+
+<div id="choose_custom" class="hidden" style="z-index:2;_width:1000px;_overflow:auto;" _style="position:absolute;width:90%;height:200px;background:white;bottom:5%;left:5%; right:5%; padding:15px; ">
+	<div style="position:absolute; width:42px; height:42px; background:red;top:5px;right:5px; background: url(/surgeweb/1992604237//shared/img/altui_menu.png?) no-repeat -84px -42px;" onclick="appearance_done()"></div>
+
+	<p></p><div style="margin-left:45px;margin-right:45px;">
+	   <span id="custom_status">Custom look ACTIVE (associated with marijn@surface.none)</span>
+	   <input type="button" value="Reset" onclick="appearance_reset()" style="margin:5px;">
+	 </div>
+
+
+	<p>
+		</p><div id="file_div" class="drop_indicator">Drop your favourite image anywhere on the login window to personalise your surgeweb background. </div>
+    <input id="file_input" class="drop_indicator hidden" type="file" accept="image/*">
+	<p>
+	  </p><div id="appearances" class="pannable" style=""></div>
+	<p>
+
+
+</p></div>
+</body></html>
